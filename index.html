@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="header">
+                <h1>TO DO LIST</h1>
+            </div>
+            <div class="action-area">
+                <div class="addSearch">
+                    <input class="inputText" type="text" placeholder="Enter String">
+                    <button class="addbtn "><i class="fa-solid fa-plus"></i></button>
+                    <button class="searchbtn"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="mobile-action-menu">
+                    <div class="open-close-menu">
+                        <img id="mobile-cta" class="mobile-menu" onclick="openmenu()" src="images/angle-down-solid.svg"
+                            alt="Open Navigation">
+                        <img id="mobile-exit" class="mobile-menu-exit hidden" onclick="closemenu()"
+                            src="images/angle-up-solid.svg" alt="Close Navigation">
+                    </div>
+                    <nav>
+                        <div class="nav-list">
+                            <div>
+                                <select id="actionDDLMobile" onchange="getSelectedValueMobile()">
+                                    <option>Action</option>
+                                    <option value="Delete All Selected">Delete All Completed</option>
+                                    <option value="Select All">Completed All</option>
+                                    <option value="Deselect All">Uncomplete All</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select id="sortDDLMobile" onchange="getSortedValueMobile()">
+                                    <option>Sort</option>
+                                    <option value="A-Z">A-Z</option>
+                                    <option value="Z-A">Z-A</option>
+                                    <option value="Newest">Newest</option>
+                                    <option value="Oldest">Oldest</option>
+                                </select>
+                            </div>
+                            <div><button id="selectAllMobile" onclick="selectEntriesMobile(this)">All</button></div>
+                            <div><button id="selectActiveMobile" onclick="selectEntriesMobile(this)">Active</button>
+                            </div>
+                            <div><button id="selectCompletedMobile"
+                                    onclick="selectEntriesMobile(this)">Completed</button></div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="action-buttons">
+                    <div class="selectList">
+                        <strong>Action :</strong>
+                        <select id="actionDDL" onchange="getSelectedValue()">
+                            <option>Select</option>
+                            <option value="Delete All Selected">Delete All Completed</option>
+                            <option value="Select All">Completed All</option>
+                            <option value="Deselect All">Uncomplete All</option>
+                        </select>
+                        <strong>Sort :</strong>
+                        <select id="sortDDL" onchange="getSortedValue()">
+                            <option>Select</option>
+                            <option value="A-Z">A-Z</option>
+                            <option value="Z-A">Z-A</option>
+                            <option value="Newest">Newest</option>
+                            <option value="Oldest">Oldest</option>
+                        </select>
+                    </div>
+                    <div class="btnList">
+                        <button id="selectAll" onclick="selectEntries(this)">All</button>
+                        <button id="selectActive" onclick="selectEntries(this)">Active</button>
+                        <button id="selectCompleted" onclick="selectEntries(this)">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="list-area">
+                <ul class="list">
+                    <span class="no-data">No data Found</span>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+<script>
+    function closemenu() {
+        document.querySelector('#mobile-cta').classList.remove('hidden');
+        document.querySelector('#mobile-exit').classList.add('hidden');
+        document.querySelector('.action-area').classList.remove('height');
+        nav = document.querySelector('nav');
+        nav.classList.remove('menu-btn');
+    }
+    function openmenu() {
+        document.querySelector('#mobile-cta').classList.add('hidden');
+        document.querySelector('#mobile-exit').classList.remove('hidden');
+        document.querySelector('.action-area').classList.add('height');
+
+        nav = document.querySelector('nav');
+        nav.classList.add('menu-btn');
+    }
+</script>
+
+</html>

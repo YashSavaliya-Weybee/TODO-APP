@@ -1,0 +1,483 @@
+body {
+  background-image: url(images/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: 0;
+  height: 95vh;
+  background-position: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(8, 8, 8, 0.6);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(8, 8, 8, 0.7);
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+  width: 70%;
+  color: white;
+  font-size: 23px;
+  margin: auto;
+  padding: 20px 30px;
+}
+.header h1 {
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(8, 8, 8, 0.7);
+  border-radius: 15px;
+  width: 40%;
+}
+.header h1:hover {
+  cursor: default;
+}
+
+main {
+  padding: 20px;
+  height: 100%;
+}
+
+.container {
+  padding: 20px;
+}
+
+.mobile-action-menu {
+  display: none;
+}
+
+.inputBox {
+  width: 60%;
+  height: 25px;
+  font-size: 15px;
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.active,
+.search {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+  cursor: pointer;
+}
+
+.editInput {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 4px;
+}
+.editInput:focus {
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+  outline: none;
+}
+
+.actv {
+  background: white;
+  color: black;
+  border-radius: 5px;
+}
+
+strong {
+  color: white;
+  font-size: 18px;
+}
+
+.no-data {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(8, 8, 8, 0.7);
+  border-radius: 9px;
+}
+
+.action-area {
+  width: 65%;
+  display: block;
+  height: 120px;
+  text-align: center;
+  background-color: rgba(8, 8, 8, 0.7);
+  padding: 20px;
+  margin: auto;
+  border-radius: 30px;
+}
+.action-area .addSearch input {
+  width: 65%;
+  height: 30px;
+  color: #b7004b;
+  border-radius: 7px;
+  border: none;
+  margin: 10px;
+  padding: 7px;
+  font-size: 20px;
+  transition-duration: 0.5s;
+}
+.action-area .addSearch input:hover {
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+}
+.action-area .addSearch input:focus {
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+  outline: none;
+}
+.action-area .addSearch button {
+  font-size: 22px;
+  color: #b7004b;
+  background-color: white;
+  border: none;
+  transition-duration: 0.5s;
+  border-radius: 7px;
+  padding: 9px 16px;
+  margin: 0px 5px;
+}
+.action-area .addSearch button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+  cursor: pointer;
+}
+.action-area .action-buttons {
+  display: flex;
+  justify-content: center;
+}
+.action-area .action-buttons .selectList {
+  width: 60%;
+}
+.action-area .action-buttons .selectList select {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  height: 40px;
+  width: 30%;
+  padding: 5px;
+  margin: 10px;
+  color: #b7004b;
+  margin-right: 20px;
+  transition-duration: 0.5s;
+  text-align: center;
+}
+.action-area .action-buttons .selectList select:hover {
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+  cursor: pointer;
+}
+.action-area .action-buttons .btnList {
+  width: 40%;
+}
+.action-area .action-buttons .btnList button {
+  border: none;
+  border-radius: 5px;
+  color: #b7004b;
+  height: 40px;
+  width: 28%;
+  padding: 5px;
+  margin: 10px 1px;
+  transition-duration: 0.5s;
+  font-size: 15px;
+  font-weight: bold;
+}
+.action-area .action-buttons .btnList button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+  cursor: pointer;
+}
+
+.list-area {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+}
+.list-area ul {
+  padding: 0;
+  height: 432px;
+  width: 100%;
+  overflow: auto;
+}
+.list-area li {
+  display: flex;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(8, 8, 8, 0.7);
+  border-radius: 9px;
+}
+.list-area li .chkBox {
+  width: 7%;
+}
+.list-area li .chkBox:hover {
+  cursor: pointer;
+}
+.list-area li span {
+  width: 81%;
+  align-self: center;
+}
+.list-area li span:hover {
+  cursor: default;
+}
+.list-area li a {
+  margin: auto;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+.list-area li a .fa-pen-to-square {
+  background-color: green;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+}
+.list-area li a .fa-delete-left {
+  background-color: #b41b1b;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+}
+.list-area li a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px hsla(0deg, 33%, 98%, 0.44);
+}
+
+@media only screen and (max-width: 1300px) {
+  .header {
+    font-size: 20px;
+    width: 100%;
+  }
+  .header h1 {
+    width: 35%;
+  }
+  .action-area {
+    width: 80%;
+  }
+  .action-area .action-buttons .selectList {
+    width: 60%;
+  }
+  .action-area .action-buttons .selectList select {
+    width: 29%;
+  }
+  .action-area .action-buttons .btnList {
+    width: 40%;
+  }
+  .action-area .action-buttons .btnList button {
+    width: 30%;
+  }
+  .list-area ul {
+    height: 372px;
+  }
+  .list-area li {
+    padding: 10px;
+  }
+  .list-area li span {
+    width: 77%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .header {
+    font-size: 23px;
+  }
+  .header h1 {
+    width: 40%;
+  }
+  .action-area {
+    width: 95%;
+  }
+  .action-area .action-buttons .selectList {
+    width: 60%;
+  }
+  .action-area .action-buttons .selectList select {
+    width: 24%;
+  }
+  .action-area .action-buttons .btnList {
+    width: 40%;
+  }
+  .action-area .action-buttons .btnList button {
+    width: 31%;
+  }
+  .list-area ul {
+    height: 360px;
+  }
+  .list-area li {
+    padding: 6px;
+  }
+  .list-area li .chkBox {
+    width: 5%;
+  }
+  .list-area li span {
+    width: 73%;
+    margin: 0px 5px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .header {
+    font-size: 18px;
+  }
+  .action-area {
+    height: 300px;
+  }
+  .action-area .addSearch {
+    display: inline-block;
+  }
+  .action-area .addSearch input {
+    width: 90%;
+    height: 25px;
+    font-size: 18px;
+  }
+  .action-area .action-buttons .btnList,
+.action-area .action-buttons .selectList {
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .action-area .action-buttons .btnList button {
+    width: 50%;
+  }
+  .action-area .action-buttons .selectList select {
+    width: 70%;
+  }
+  .list-area ul {
+    height: 360px;
+  }
+  .list-area li {
+    padding: 5px;
+  }
+  .list-area li .chkBox {
+    width: 5%;
+  }
+  .list-area li span {
+    width: 73%;
+    margin: 0px 5px;
+  }
+  .list-area li span .editInput {
+    width: 100%;
+  }
+  .list-area li a {
+    font-size: medium;
+    margin: 2px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 15px;
+    width: 73%;
+  }
+  .header h1 {
+    width: auto;
+  }
+  .action-area {
+    height: 180px;
+  }
+  .action-area .addSearch {
+    padding: 10px;
+  }
+  .action-area .addSearch input {
+    width: 78%;
+  }
+  .action-area .addSearch button {
+    font-size: medium;
+    padding: auto;
+  }
+  .action-area .action-buttons {
+    display: none;
+  }
+  .height {
+    height: 420px;
+  }
+  .mobile-action-menu {
+    display: block;
+    padding: 10px;
+  }
+  .mobile-action-menu .open-close-menu {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .menu-list-exit-layer {
+    display: none;
+  }
+  .mobile-menu,
+.mobile-menu-exit {
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 5px;
+    height: 25px;
+  }
+  nav {
+    display: none;
+  }
+  .hidden {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  nav {
+    margin: auto;
+    margin-top: 10px;
+    z-index: 999;
+    width: 70%;
+    background: #20272E;
+    height: 25vh;
+    padding: 1em;
+    border-radius: 20px;
+  }
+  nav div {
+    display: block;
+    padding: 0.3em;
+  }
+  nav div select {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    font-weight: bold;
+    color: #b7004b;
+    border-radius: 6px;
+  }
+  nav div button {
+    border: none;
+    width: 89%;
+    height: 30px;
+    padding: 5px;
+    font-weight: bold;
+    color: #b7004b;
+    border-radius: 6px;
+  }
+  nav .nav-list {
+    margin: 5px;
+  }
+  .mobile-action-menu {
+    display: block;
+  }
+  .list-area {
+    width: 100%;
+  }
+  .list-area li {
+    width: 93%;
+  }
+  .list-area li .chkBox {
+    width: 20%;
+  }
+  .list-area li a {
+    font-size: medium;
+    margin: 2px;
+  }
+}/*# sourceMappingURL=main.css.map */
